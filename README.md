@@ -58,7 +58,7 @@ Shifted by 2 Alphabet:  89ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01
 [Vigeneres Ciphe](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) represents a series of interwoven Caesar ciphers. Using a keyword, each character of plaintext message is encrypted by Casar cipher with shift equal to the distance between given plaintext character and character at corresponding position in the key.
 
 ```text
-Plaintext:	ATTACKATDAWN
+Plaintext:  ATTACKATDAWN
 Key:	    LEMON
 Ciphertext:	LXfOPVEfRNhR
 ```
