@@ -1,8 +1,6 @@
 package cz.muni.fi.pb162.hw01;
 
-
 import cz.muni.fi.pb162.hw01.impl.Application;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DynamicTest;
@@ -17,11 +15,11 @@ import java.nio.file.Paths;
 import java.util.function.BiFunction;
 import java.util.stream.Stream;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
 
-/**
- * @author somebody
- */
-public class CipherTest {
+final class CipherTest {
+
     private static PrintStream outBcp;
     private static PrintStream errBcp;
 
@@ -30,9 +28,8 @@ public class CipherTest {
     private static ByteArrayOutputStream err = new ByteArrayOutputStream();
     private static PrintStream errStream = new PrintStream(err);
 
-
     @BeforeAll
-    public static void setupClass() {
+    static void setupClass() {
         outBcp = System.out;
         errBcp = System.err;
         System.setOut(outStream);
@@ -40,24 +37,23 @@ public class CipherTest {
     }
 
     @AfterAll
-    public static void teardownClass() {
+    static void teardownClass() {
         System.setOut(outBcp);
         System.setErr(errBcp);
     }
 
-    public void assertOutput(ByteArrayOutputStream stream, boolean ignoreCase, String expected) {
+    void assertOutput(ByteArrayOutputStream stream, boolean ignoreCase, String expected) {
         String actual = stream.toString().trim();
         if (ignoreCase) {
-            Assertions.assertThat(actual).containsIgnoringCase(expected);
+            assertThat(actual).containsIgnoringCase(expected);
         } else {
-            Assertions.assertThat(actual).contains(expected);
+            assertThat(actual).contains(expected);
         }
         stream.reset();
     }
 
-
     @TestFactory
-    public Stream<DynamicTest> cipherTestFactory() throws IOException {
+    Stream<DynamicTest> cipherTestFactory() throws IOException {
         Path resources = Paths.get("src", "test", "resources");
         Stream<DynamicTest> morse = Files
                 .list(resources.resolve("morse"))
@@ -118,7 +114,7 @@ public class CipherTest {
     }
 
     private Stream<DynamicTest> unableToReadFile(Path path, String message) {
-        return Stream.of(DynamicTest.dynamicTest(path.getFileName().toString(), () -> Assertions.fail(message)));
+        return Stream.of(DynamicTest.dynamicTest(path.getFileName().toString(), () -> fail(message)));
     }
 
     private Stream<DynamicTest> testFromFile(Path path, BiFunction<Path, String[], Stream<DynamicTest>> cipherTest) {
@@ -133,6 +129,4 @@ public class CipherTest {
             return unableToReadFile(path, "Unable to read input file.");
         }
     }
-
-
 }

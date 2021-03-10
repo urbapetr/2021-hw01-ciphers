@@ -1,7 +1,7 @@
 package cz.muni.fi.pb162.hw01;
 
 /**
- * Enumeration of supported operations
+ * Supported operations
  */
 public enum Operation {
     ENCRYPT,

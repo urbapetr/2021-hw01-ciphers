@@ -1,7 +1,7 @@
 package cz.muni.fi.pb162.hw01.impl.ciphers;
 
 /**
- * Cipher interface mandating encrypt end decrypt functionality
+ * Interface mandating encrypt end decrypt functionality via {@link #ALPHABET}
  */
 public interface Cipher {
 
@@ -11,19 +11,18 @@ public interface Cipher {
             "0123456789";
 
     /**
-     * Encrypts given text by this cipher
+     * Encrypts given plain text using this cipher
      *
      * @param plainText text to be encrypted
-     * @return encrypted text
+     * @return encrypted (cipher) text
      */
     String encrypt(String plainText);
 
     /**
-     * Decrypts given cipher text
+     * Decrypts given cipher text using this cipher
      *
-     * @param cypherText encrypted text
-     * @return original text
+     * @param cipherText text to be decrypted
+     * @return original (plain) text
      */
-    String decrypt(String cypherText);
-
+    String decrypt(String cipherText);
 }

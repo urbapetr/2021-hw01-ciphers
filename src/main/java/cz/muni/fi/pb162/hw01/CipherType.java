@@ -1,11 +1,10 @@
 package cz.muni.fi.pb162.hw01;
 
 /**
- * Enumeration of supported ciphers
+ * Supported ciphers
  */
 public enum CipherType {
     CAESAR,
     VIGENERE,
-    MORSE_CODE;
-
+    MORSE_CODE
 }

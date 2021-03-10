@@ -18,7 +18,7 @@ import cz.muni.fi.pb162.hw01.cmd.OperationConverter;
  */
 public class Application {
 
-    @Parameter(names = {"--cipher", "-c"}, required = false, converter = CipherTypeConverter.class)
+    @Parameter(names = {"--cipher", "-c"}, converter = CipherTypeConverter.class)
     private CipherType cipherType = CipherType.MORSE_CODE;
 
     @Parameter(names = {"--operation", "-o"}, required = true, converter = OperationConverter.class)
@@ -27,21 +27,19 @@ public class Application {
     @Parameter(names = {"--text", "-t"}, required = true)
     private String text;
 
-    @Parameter(names = {"--shift"} )
+    @Parameter(names = {"--shift"})
     private int caesarShift;
 
-    @Parameter(names = {"--key"} )
+    @Parameter(names = {"--key"})
     private String vigenereKey;
 
     @Parameter(names = "--help", help = true)
-    private boolean help = false;
-
-
+    private boolean showUsage = false;
 
     /**
      * Application entry point
      *
-     * @param args arguments are ignored
+     * @param args command line arguments of the application
      */
     public static void main(String[] args) {
         Application app = new Application();
@@ -49,7 +47,7 @@ public class Application {
         commander.setProgramName("application");
         try {
             commander.parse(args);
-            if (app.help) {
+            if (app.showUsage) {
                 commander.usage();
                 return;
             }
@@ -65,5 +63,4 @@ public class Application {
     private void run() {
         Utils.error("Remove this and implement this method");
     }
-
 }

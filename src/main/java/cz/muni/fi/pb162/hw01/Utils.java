@@ -2,7 +2,6 @@ package cz.muni.fi.pb162.hw01;
 
 import java.util.Objects;
 
-
 /**
  * Utility methods available to be used in your solution
  */

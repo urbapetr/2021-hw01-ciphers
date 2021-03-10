@@ -3,7 +3,6 @@ package cz.muni.fi.pb162.hw01.cmd;
 import com.beust.jcommander.converters.BaseConverter;
 import cz.muni.fi.pb162.hw01.CipherType;
 
-
 /**
  * Converter for cipher type command line option
  */
