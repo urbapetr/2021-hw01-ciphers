@@ -43,18 +43,22 @@ public class Application {
      */
     public static void main(String[] args) {
         Application app = new Application();
+
         JCommander commander = JCommander.newBuilder().addObject(app).build();
         commander.setProgramName("application");
         try {
             commander.parse(args);
-            if (app.showUsage) {
-                commander.usage();
-                return;
-            }
-            app.run();
         } catch (ParameterException pe) {
             System.err.println("Error: " + pe.getMessage());
+            commander.usage();
+            System.exit(1);
         }
+
+        if (app.showUsage) {
+            commander.usage();
+            return;
+        }
+        app.run();
     }
 
     /**
