@@ -4,7 +4,7 @@ import com.beust.jcommander.Parameter;
 import cz.muni.fi.pb162.hw01.CipherType;
 import cz.muni.fi.pb162.hw01.Operation;
 import cz.muni.fi.pb162.hw01.cmd.CipherTypeConverter;
-import cz.muni.fi.pb162.hw01.cmd.CommandLineParser;
+import cz.muni.fi.pb162.hw01.cmd.CommandLine;
 import cz.muni.fi.pb162.hw01.cmd.OperationConverter;
 
 /**
@@ -42,7 +42,7 @@ public class Application {
     public static void main(String[] args) {
         Application app = new Application();
 
-        CommandLineParser cli = new CommandLineParser(app);
+        CommandLine cli = new CommandLine(app);
         cli.parseArguments(args);
 
         if (app.showUsage) {
