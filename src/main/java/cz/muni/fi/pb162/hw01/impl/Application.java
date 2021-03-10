@@ -3,7 +3,6 @@ package cz.muni.fi.pb162.hw01.impl;
 import com.beust.jcommander.Parameter;
 import cz.muni.fi.pb162.hw01.CipherType;
 import cz.muni.fi.pb162.hw01.Operation;
-import cz.muni.fi.pb162.hw01.Utils;
 import cz.muni.fi.pb162.hw01.cmd.CipherTypeConverter;
 import cz.muni.fi.pb162.hw01.cmd.CommandLineParser;
 import cz.muni.fi.pb162.hw01.cmd.OperationConverter;
@@ -57,6 +56,8 @@ public class Application {
      * Application runtime logic
      */
     private void run() {
-        Utils.error("Remove this and implement this method");
+        // TODO: Remove the following lines and implement the functionality
+        System.err.println("Not implemented yet!");
+        System.exit(2);
     }
 }

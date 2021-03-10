@@ -5,7 +5,11 @@ import java.util.Objects;
 /**
  * Utility methods available to be used in your solution
  */
-public class Utils {
+public final class Utils {
+
+    private Utils() {
+        // Intentionally made private to prevent instantiation
+    }
 
     /**
      * Finds the index of given element in array
