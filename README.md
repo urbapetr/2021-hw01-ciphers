@@ -67,23 +67,23 @@ Ciphertext:	LXfOPVEfRNhR
 ### Evaluation
 Beside functional correctness this assignment is focused on object oriented design. 
 This means that the way you structure your program will be an important part of its evaluation.
-On the other hand the given set of tests is not trying to provide a an elaborate test coverage an incorrect behaviour in corner-cases should not have a large impact on the evaluation.
+On the other hand the given set of tests is not trying to provide an elaborate test coverage and incorrect behaviour in corner-cases should not have a large impact on the evaluation.
 
 Note that all this is at your seminar teacher's discretion.
  
 The maximum number of points for this assignment is **7**.
 
-- **3.5 points** for passing tests (attached tests do not guarantee a 100% correctness).
+- **3.5 points** for passing the tests (attached tests do not guarantee a 100% correctness).
 - **3.5 points** for correct and clean implementation (evaluated by your class teacher).
 
 ### Preconditions
 To successfully implement this assignment you need to know the following
 
-1. What is the difference between class and object and how to work with both.
-2. How programs are structured in object oriented languages. 
-3. How to use basic control structures such as if, while and switch.
-4. How to work with Strings in java
-5. How to work with arrays
+1. What is the difference between _class_ and _object_ and how to work with both.
+2. How programs are structured in _object-oriented_ languages. 
+3. How to use basic control structures such as `if`, `for`/`while` and `switch`.
+4. How to work with `String`s and `enum`s in Java.
+5. How to work with _arrays_.
 6. Being able to understand and navigate a code provided by third-party. 
 
 ### Project structure
@@ -115,7 +115,7 @@ $ mvn clean install -Dcheckstyle.fail=false
 You can consult your seminar teacher to help you set the ```checkstyle.fail``` property in your IDE (or just google it). 
 
 ### Running the application
-The build descriptor is configured to produce a single runnable jar file located at ``target/application.jar````. The application can be run using the following command
+The build descriptor is configured to produce a single runnable jar file located at `target/application.jar`. The application can be run using the following command
 
 ```bash
 # By default Morse Coder is used
@@ -136,7 +136,7 @@ $ B7R9, y0P T8 CDI?
 ```
 
 ### Submitting the assignment
-The procedure to submit your solution may differ based on your seminar group. However generally it should be ok to submit ```target/homework01-2021-1.0-SNAPSHOT-sources.jar``` to the homework vault.
+The procedure to submit your solution may differ based on your seminar group. However generally it should be OK to submit ```target/homework01-2021-1.0-SNAPSHOT-sources.jar``` to the homework vault.
 
 ## Implementation
 Generally speaking there are no mandatory requirements on the structure of your code as long as the command line interface of ```Appplication``` class works correctly. 
