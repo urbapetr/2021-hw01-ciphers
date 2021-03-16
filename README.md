@@ -1,16 +1,16 @@
 Homework assignment no. 1, Simple Ciphers
 ====================================
 
-**Publication date:**  TBD 
+**Publication date:**  March 19, 2021
 
-**Submission deadline:** TBD
+**Submission deadline:** April 2, 2021
 
 General information
 -------------------
 The goal of this homework is to implement a set of simple and well known [substitution ciphers](https://en.wikipedia.org/wiki/Substitution_cipher).
 To be more specific, you will be implementing the following ciphers
 
-* **Morse Code** -- Yes even when called a "code" it is a cipher 
+* **Morse Code** -- Yes even when called a "code" it is a cipher
 * **Caesar Cipher** -- Probably the most known substitution cipher out there
 * **Vigenere Cipher** -- A series of interwoven Caesar ciphers
 
@@ -47,7 +47,7 @@ Also note that Morse Code is case insensitive and thus lower and upper case lett
 
 ### Caesar Cipher
 A simple cipher in which a plaintext letter is replaced by a letter following some fixed number of positions later in the alphabet.
-Should the shift be greater than the size of the alphabet then simple modulo by the size of the alphabet is applied to it. 
+Should the shift be greater than the size of the alphabet then simple modulo by the size of the alphabet is applied to it.
 
 ```text
 Plaintext Alphabet:     ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
@@ -65,26 +65,26 @@ Ciphertext:	LXfOPVEfRNhR
 
 
 ### Evaluation
-Beside functional correctness this assignment is focused on object oriented design. 
+Beside functional correctness this assignment is focused on object oriented design.
 This means that the way you structure your program will be an important part of its evaluation.
 On the other hand the given set of tests is not trying to provide an elaborate test coverage and incorrect behaviour in corner-cases should not have a large impact on the evaluation.
 
 Note that all this is at your seminar teacher's discretion.
- 
-The maximum number of points for this assignment is **7**.
 
-- **3.5 points** for passing the tests (attached tests do not guarantee a 100% correctness).
-- **3.5 points** for correct and clean implementation (evaluated by your class teacher).
+The maximum number of points for this assignment is **10**.
+
+- **6 points** for passing the tests (attached tests do not guarantee a 100% correctness).
+- **4 points** for correct and clean implementation (evaluated by your class teacher).
 
 ### Preconditions
 To successfully implement this assignment you need to know the following
 
 1. What is the difference between _class_ and _object_ and how to work with both.
-2. How programs are structured in _object-oriented_ languages. 
+2. How programs are structured in _object-oriented_ languages.
 3. How to use basic control structures such as `if`, `for`/`while` and `switch`.
 4. How to work with `String`s and `enum`s in Java.
 5. How to work with _arrays_.
-6. Being able to understand and navigate a code provided by third-party. 
+6. Being able to understand and navigate a code provided by third-party.
 
 ### Project structure
 The structure of project provided as a base for your implementation should meet the following criteria.
@@ -99,20 +99,20 @@ Unless fully classified name is provided, all class names are relative to  packa
 
 
 ### Compiling the project
-The project can be compiled and packaged in the same way you already know 
+The project can be compiled and packaged in the same way you already know
 
 ```bash
 $ mvn clean install
 ```
 
-The only difference is, that unlike with seminar project, this time checks for missing documentation and style violation will produce an error. 
-You can temporarily disable this behavior when running this command. 
+The only difference is, that unlike with seminar project, this time checks for missing documentation and style violation will produce an error.
+You can temporarily disable this behavior when running this command.
 
 ```bash
 $ mvn clean install -Dcheckstyle.fail=false
 ```
 
-You can consult your seminar teacher to help you set the ```checkstyle.fail``` property in your IDE (or just google it). 
+You can consult your seminar teacher to help you set the ```checkstyle.fail``` property in your IDE (or just google it).
 
 ### Running the application
 The build descriptor is configured to produce a single runnable jar file located at `target/application.jar`. The application can be run using the following command
@@ -139,5 +139,5 @@ $ B7R9, y0P T8 CDI?
 The procedure to submit your solution may differ based on your seminar group. However generally it should be OK to submit ```target/homework01-2021-1.0-SNAPSHOT-sources.jar``` to the homework vault.
 
 ## Implementation
-Generally speaking there are no mandatory requirements on the structure of your code as long as the command line interface of ```Appplication``` class works correctly. 
-The use of classes, enums and interfaces, provided as part of the project skeleton is up to your decision. 
+Generally speaking there are no mandatory requirements on the structure of your code as long as the command line interface of ```Appplication``` class works correctly.
+The use of classes, enums and interfaces, provided as part of the project skeleton is up to your decision.
