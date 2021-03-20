@@ -1,9 +1,9 @@
 Homework assignment no. 1, Simple Ciphers
 ====================================
 
-**Publication date:**  March 19, 2021
+**Publication date:**  March 20, 2021
 
-**Submission deadline:** April 2, 2021
+**Submission deadline:** April 3, 2021
 
 General information
 -------------------
