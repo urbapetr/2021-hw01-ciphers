@@ -56,8 +56,6 @@ public class Application {
      * Application runtime logic
      */
     private void run() {
-        // TODO: Remove the following lines and implement the functionality
-        System.err.println("Not implemented yet!");
-        System.exit(2);
+        (new morse_code("Hello")).encode();
     }
 }
