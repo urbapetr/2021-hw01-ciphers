@@ -1,6 +1,7 @@
 package cz.muni.fi.pb162.hw01.impl;
 
 /**
+ * Caesar cipher is using key to move with characters
  * @author Petr Urbanek
  */
 public class CaesarCipher {
@@ -14,6 +15,10 @@ public class CaesarCipher {
         MESSAGE = text;
     }
 
+    /**
+     * Encode of Caesar cipher using moveBy to count
+     * which character it is from ALPHABET
+     */
     public void encode(){
         String letters = "";
         int moveBy;
@@ -30,6 +35,9 @@ public class CaesarCipher {
         System.out.println(letters + "\n");
     }
 
+    /**
+     * Using encode with (-1) * key
+     */
     public void decode(){
         key *=-1;
         encode();

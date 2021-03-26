@@ -1,6 +1,9 @@
 package cz.muni.fi.pb162.hw01.impl;
 
 /**
+ * Morse code, every character have his own "code", this code is
+ * joined together into message of . (dots) and - (minus), or
+ * better said, into . (short) and - (long) signal
  * @author Petr Urbanek
  */
 public class MorseCode {
@@ -11,6 +14,10 @@ public class MorseCode {
         MESSAGE = text;
     }
 
+    /**
+     * Encode of Morse code using switch to identify
+     * each character
+     */
     public void encode(){
         String letters = "";
         for (int i = 0; i < MESSAGE.length(); i++)
@@ -86,6 +93,10 @@ public class MorseCode {
         System.out.println(letters + "\n");
     }
 
+    /**
+     * Decode of Morse code using switch to identify
+     * each character
+     */
     public void decode(){
         String letters = "";
         String word = "";

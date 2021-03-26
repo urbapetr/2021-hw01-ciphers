@@ -1,6 +1,8 @@
 package cz.muni.fi.pb162.hw01.impl;
 
 /**
+ * This class works for Vigenere cipher which "move" character into different
+ * character by another string
  * @author Petr Urbanek
  */
 public class VigenereCipher {
@@ -14,6 +16,10 @@ public class VigenereCipher {
         MESSAGE = text;
     }
 
+    /**
+     * Encode of Vigenere cipher using index of chars together into
+     * moveBy to count which character it is from ALPHABET
+     */
     public void encode(){
         String letters = "";
         int moveBy;
@@ -35,6 +41,9 @@ public class VigenereCipher {
         System.out.println(letters + "\n");
     }
 
+    /**
+     * Using encode
+     */
     public void decode(){
         String newKeyMessage = "";
         String character = "";
