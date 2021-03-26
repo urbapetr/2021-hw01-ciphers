@@ -56,6 +56,11 @@ public class Application {
      * Application runtime logic
      */
     private void run() {
-        (new morse_code("Hello")).encode();
+        (new MorseCode("Hello")).encode();
+        (new MorseCode("....|.|.-..|.-..|---|")).decode();
+        (new CaesarCipher("ABCD89",2)).encode();
+        (new CaesarCipher("89AB67",2)).decode();
+        (new VigenereCipher("ATTACKATDAWN","LEMON")).encode();
+        (new VigenereCipher("LXfOPVEfRNhR", "LEMON")).decode();
     }
 }
