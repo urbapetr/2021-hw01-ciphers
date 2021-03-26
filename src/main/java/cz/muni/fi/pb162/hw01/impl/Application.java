@@ -56,8 +56,11 @@ public class Application {
      * Application runtime logic
      */
     private void run() {
-        // TODO: Remove the following lines and implement the functionality
-        System.err.println("Not implemented yet!");
-        System.exit(2);
+        (new MorseCode("Hello")).encode();
+        (new MorseCode("....|.|.-..|.-..|---|")).decode();
+        (new CaesarCipher("ABCD89",2)).encode();
+        (new CaesarCipher("89AB67",2)).decode();
+        (new VigenereCipher("ATTACKATDAWN","LEMON")).encode();
+        (new VigenereCipher("LXfOPVEfRNhR", "LEMON")).decode();
     }
 }

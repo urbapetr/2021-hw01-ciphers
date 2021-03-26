@@ -25,4 +25,5 @@ public interface Cipher {
      * @return original (plain) text
      */
     String decrypt(String cipherText);
+
 }
