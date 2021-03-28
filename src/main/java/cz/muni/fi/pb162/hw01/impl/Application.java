@@ -56,11 +56,26 @@ public class Application {
      * Application runtime logic
      */
     private void run() {
-        (new MorseCode("Hello")).encode();
-        (new MorseCode("....|.|.-..|.-..|---|")).decode();
-        (new CaesarCipher("ABCD89",2)).encode();
-        (new CaesarCipher("89AB67",2)).decode();
-        (new VigenereCipher("ATTACKATDAWN","LEMON")).encode();
-        (new VigenereCipher("LXfOPVEfRNhR", "LEMON")).decode();
+        if (cipherType == CipherType.MORSE_CODE){
+            if (operation == Operation.ENCRYPT){
+                (new MorseCode(text)).encode();
+            } else{
+                (new MorseCode(text)).decode();
+            }
+        }
+        if (cipherType == CipherType.CAESAR){
+            if (operation == Operation.ENCRYPT){
+                (new CaesarCipher(text, caesarShift)).encode();
+            } else{
+                (new CaesarCipher(text, caesarShift)).decode();
+            }
+        }
+        if (cipherType == CipherType.VIGENERE){
+            if (operation == Operation.ENCRYPT){
+                (new VigenereCipher(text, vigenereKey)).encode();
+            } else{
+                (new VigenereCipher(text, vigenereKey)).decode();
+            }
+        }
     }
 }

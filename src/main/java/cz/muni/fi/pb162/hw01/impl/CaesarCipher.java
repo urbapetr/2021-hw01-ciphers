@@ -6,13 +6,17 @@ package cz.muni.fi.pb162.hw01.impl;
  */
 public class CaesarCipher {
 
-    private final String MESSAGE;
+    private final String message;
     private int key;
-    private final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private final String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+    /**
+     * @param text which will be decoded/encoded
+     * @param number how much will by characters moved
+     */
     public CaesarCipher(String text, int number){
-        key = -1*number;
-        MESSAGE = text;
+        key = number;
+        message = text;
     }
 
     /**
@@ -22,15 +26,30 @@ public class CaesarCipher {
     public void encode(){
         String letters = "";
         int moveBy;
-        for (int i = 0; i < MESSAGE.length(); i++){
-            moveBy = ALPHABET.indexOf(MESSAGE.charAt(i)) + key;
-            if (moveBy > ALPHABET.length() - 1){
-                moveBy -= ALPHABET.length();
+        boolean space = false;
+        for (int i = 0; i < message.length(); i++){
+            if ((Character.toString(message.charAt(i))).equals(" ")){
+                space = true;
+                continue;
+            }
+            if (!(alphabet.contains(Character.toString(message.charAt(i))))){
+                System.out.println(message.charAt(i));
+                letters = letters.concat(Character.toString(message.charAt(i)));
+                continue;
+            }
+            moveBy = alphabet.indexOf(message.charAt(i)) + key;
+            if (moveBy > alphabet.length() - 1){
+                moveBy -= alphabet.length();
             }
             if (moveBy < 0){
-                moveBy += ALPHABET.length();
+                moveBy += alphabet.length();
             }
-            letters = letters.concat(Character.toString(ALPHABET.charAt(moveBy)));
+            if (space){
+                letters = letters.concat(" ".concat(Character.toString(alphabet.charAt(moveBy))));
+            } else {
+                letters = letters.concat(Character.toString(alphabet.charAt(moveBy)));
+            }
+            space = false;
         }
         System.out.println(letters + "\n");
     }
